@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
@@ -23,10 +24,12 @@
   },
   "dependencies": {
     "envify": "^4.1.0",
+    "immutability-helper": "^2.8.1",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
     "uglifyify": "^5.0.1"
   }
 }
