@@ -116,8 +116,9 @@ class Summoning extends React.Component {
       return (
         <div className="summon_container">
           <div className="summon_system" >
-            {/*<img id="title_screen" src="file://E:/PKJP2/FGOCG集_製品版/04ビューワ用/ピックアップタイトル.jpg"/>*/}
-            {<img id="title_screen" src="04ビューワ用/ピックアップタイトル.jpg"/>}
+            {process.env.NODE_ENV == "dev" ?
+            (<img id="title_screen" src="file://E:/PKJP2/FGOCG集_製品版/04ビューワ用/ピックアップタイトル.jpg"/>) :
+            (<img id="title_screen" src="04ビューワ用/ピックアップタイトル.jpg"/>)}
             <div className="title_buttons">
               <a href="#" className="button blueButton" onClick={() => this.showCatalog()}>便女図鑑</a>
               <a href="#" className="button blueButton" onClick={() => this.roll("10ROLLRARITY")}>{"10回召喚"}</a>

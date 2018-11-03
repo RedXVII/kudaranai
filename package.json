@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "watchify index.js -t babelify --outfile bundle.js",
-    "build": "browserify index.js -t babelify --outfile bundle.js",
-    "prod": "browserify index.js -t babelify -g uglifyify --outfile bundle.js"
+    "start": "watchify index.js -t babelify -t [envify --NODE_ENV dev] --outfile bundle.js",
+    "build": "browserify index.js -t babelify -t [envify --NODE_ENV dev] --outfile bundle.js",
+    "prod": "browserify index.js -t babelify -t [envify --NODE_ENV prod] -g uglifyify --outfile bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "babelify": "^10.0.0"
   },
   "dependencies": {
+    "envify": "^4.1.0",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

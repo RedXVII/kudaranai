@@ -3,8 +3,7 @@ var BenjoCardMapping = require("./BenjoCardMapping");
 var BenjoHandler = require("./BenjoHandler");
 var _ = require('lodash');
 
-//const rootFolder = "file:///E:/PKJP2/FGOCG集_製品版/"
-const rootFolder = ""
+const rootFolder = process.env.NODE_ENV == "dev"  ? "file:///E:/PKJP2/FGOCG集_製品版/" : ""
 
 class Catalog extends React.Component {
 

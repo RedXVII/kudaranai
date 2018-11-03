@@ -3,8 +3,7 @@ var _ = require('lodash');
 
 var BenjoMapping = require('./BenjoMapping');
 
-//const rootFolder = "file:///E:/PKJP2/FGOCG集_製品版/"
-const rootFolder = ""
+const rootFolder = process.env.NODE_ENV == "dev"  ? "file:///E:/PKJP2/FGOCG集_製品版/" : ""
 
 function optionsToNumber(options)
 {
