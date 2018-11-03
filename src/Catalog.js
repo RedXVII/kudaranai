@@ -48,7 +48,7 @@ class Catalog extends React.Component {
               </a>
             )
             ;})}
-
+        <a href="#" className="button blueButton" onClick={() => this.props.hideCatalog()}>タイトルを戻る</a>
       </div>
     );
   }

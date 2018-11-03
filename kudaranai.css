@@ -32,6 +32,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.catalog > .button {
+  height: 2.5em;
+  margin: auto;
+}
+
 .benjo_link {
   margin: -2px auto;
 }

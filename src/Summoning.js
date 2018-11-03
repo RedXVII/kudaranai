@@ -37,6 +37,7 @@ class Summoning extends React.Component {
 
     this.next = this.next.bind(this);
     this.roll = this.roll.bind(this);
+    this.hideCatalog = this.hideCatalog.bind(this);
   }
 
   roll(mode)
@@ -105,11 +106,16 @@ class Summoning extends React.Component {
     this.setState({catalog:true});
   }
 
+  hideCatalog()
+  {
+    this.setState({catalog:false});
+  }
+
   render()
   {
     if (this.state.catalog)
     {
-      return( <Catalog benjoList={BenjoList} />)
+      return( <Catalog benjoList={BenjoList} hideCatalog={this.hideCatalog} />)
     }
     else if (this.state.summonedBenjos == null)
     {
