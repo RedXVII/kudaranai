@@ -1,0 +1,31 @@
+{
+  "name": "kudaranai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify index.js -t babelify --outfile bundle.js",
+    "build": "browserify index.js -t babelify --outfile bundle.js",
+    "prod": "browserify index.js -t babelify -g uglifyify --outfile bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babelify": "^10.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.1.0",
+    "uglifyify": "^5.0.1"
+  }
+}
